@@ -9,6 +9,9 @@ class Fiber : public Block {
 
 	/* State Variables */
 
+	t_complex* transferFunction;
+	t_complex* impulseResponse;
+
 public:
 
 	/* Input Parameters */
@@ -16,6 +19,7 @@ public:
 	t_real attenuationCoeficient{ 4.6052e-05 }; //m^(-1) correspond to 0.2 dB/km
 	t_real dispersionCoeficient{ 0.0 }; //
 	t_real fiberLength{ 0.0 }; //
+	t_integer impulseResponseLength{ 256 };
 	
 	/* Methods */
 	Fiber(vector<Signal *> &InputSig, vector<Signal *> &OutputSig) :Block(InputSig, OutputSig) {}; 
