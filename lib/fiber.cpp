@@ -11,6 +11,15 @@ void Fiber::initialize(void) {
 	outputSignals[0]->setSymbolPeriod(inputSignals[0]->getSymbolPeriod());
 	outputSignals[0]->setSamplingPeriod(inputSignals[0]->getSamplingPeriod());
 	outputSignals[0]->setFirstValueToBeSaved(inputSignals[0]->getFirstValueToBeSaved());
+
+	// initializer
+
+	// reservar espaço em memoria para a função transferencia malloc()
+	// reservar espaço em memoria para a resposta impulsional
+	// calcular a função H(w)
+	// calculas o h(t) ifft(H(w)
+	// gravas num ficheiro H(w)
+	// gravas noutro ficheiro o h(t)
 }
 
 bool Fiber::runBlock(void) {
